@@ -12,12 +12,3 @@ function myFunction() {
 }
 
 
-// Bar menu //
-
-// var burger = document.querySelector('.miCheckbox');
-// const menu = document.querySelector('.header__nav');
-
-// burger.addEventListener('click', (e) => {
-//   burger.classList.add('expanded')
-// })
-

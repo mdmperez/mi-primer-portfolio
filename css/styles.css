@@ -257,19 +257,10 @@ img {
 		position: fixed;
 		cursor: pointer;
 		z-index: 2;
-	}
-	.miCheckbox input[type="checkbox"]:checked   {
-		background: transparent;
+		transition: all ease .3s;
 	}
 	
-	.miCheckbox input[type="checkbox"]:checked ~ ::before {
-		transform: rotate(45deg);
-	}
-	.miCheckbox input[type="checkbox"]:checked  ~ ::after {
-		transform: rotate(-45deg);
-	}
 
-	
 	.miCheckbox::before {
 		content: " ";
 		height: 2px;
@@ -279,6 +270,7 @@ img {
 		background: var(--color-positive);
 		position: fixed;
 		cursor: pointer;
+		transition: all ease .3s;
 
 	}
 	
@@ -291,8 +283,8 @@ img {
 		background: var(--color-positive);
 		position: fixed;
 		cursor: pointer;
+		transition: all ease .3s;
 	}
-	
 	
 	.header__list {
 		display: flex;
@@ -323,8 +315,20 @@ img {
 	#miCheckbox-chk:checked ~ .header__list {
 		transform: translate(5%);
 		height: 100%;
+	}
+
+	#miCheckbox-chk:checked ~ .miCheckbox{
+		border-bottom: transparent;
+	}
+  	#miCheckbox-chk:checked ~ .miCheckbox::before{
+		transform: rotate(36deg) translate(10px, 1px);
 	
 	}
+  	#miCheckbox-chk:checked ~ .miCheckbox::after{
+		transform: rotate(-36deg) translate(10px, -4px);
+		
+	}
+
 } 
 
 
