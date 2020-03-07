@@ -260,6 +260,7 @@ img {
 	.miCheckbox {
 		top: 1rem;
 		right: 1rem;
+		width: 37px;
 		color: transparent;
 		border-bottom: 2px solid var(--color-positive);
 		position: fixed;
