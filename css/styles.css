@@ -84,6 +84,7 @@ img {
 	--text-m: 44px;
 	--text-s: 28px;
 	--text-xs: 14px;
+	--text-xxs: 12px;
 	--text-default: 18px;
 
 }
@@ -120,6 +121,18 @@ img {
 	}
 }
 
+@media (max-width: 470px) {
+	.header {
+		background-size: 360%;	
+	}
+}
+
+@media (max-width: 340px) {
+	.header {
+		background-size: 400%;	
+	}
+}
+
 .header__nav {
 	display: flex;
 	flex-direction: row;
@@ -150,18 +163,17 @@ img {
 		width: 66px;
 		height: 50px;
 		top: 0.5rem;
-		right: 0rem;
+		right: 0;
 		background:var(--color-transparent);
 		border-radius: 7px 0 0 7px ;
 		position: fixed;
 	}
+
+	.header__list {
+		position: fixed;
+	
+	}
 }
-
-.header__list {
-	position: fixed;
-
-}
-
 
 @media (min-width:985px) {
 	#miCheckbox-chk,
@@ -239,14 +251,10 @@ img {
 		padding: 0;
 		margin: 0;
 	} 
-
-
 	
 	#miCheckbox-chk {
 		top: -100px;
-		right: -100px;
 		display: none;
-		
 	}
 	 
 	.miCheckbox {
@@ -339,7 +347,7 @@ img {
 	text-align: center;
 	font-family: var(--title-ff);
 	max-width: 549px;
-	margin: 100px 0;
+	margin: 100px 20px;
 
 	animation: inicioNav .7s ease-out;
 }
@@ -362,7 +370,7 @@ img {
 @media (max-width: 720px) {
 	.header__text--name {
 		font-size: var(--text-l);
-		margin-top: .5em;
+		margin: .5em;
 	}
 
 	.header__text--job {
@@ -438,6 +446,24 @@ img {
 	font-family: var(--default-ff);
 	padding: 2rem;
 }
+
+@media (max-width: 420px) {
+	.personal-date__leaf {
+		display: none;
+	}
+	.personal-date__dates-info {
+		font-size: var(--text-xxs);
+	}
+
+	.personal-date__dates {
+		grid-gap: 1rem .2rem;
+		padding: 1rem .5rem;
+	}
+
+
+}
+
+
 
 /* EXPERIENCIA */
 
@@ -652,6 +678,7 @@ img {
 .competence__content {
 	margin: 0 4rem;
 	font-family: var(--default-ff);
+
 }
 
 .competence__list {
@@ -666,17 +693,36 @@ img {
 	flex-direction: column;
 	padding: .5rem 2rem;
 	max-width: 400px;
-
 }
+
+@media (max-width: 420px){
+	progress[value] {
+		width: 200px;
+		height: 12px;
+	  }
+	  .competence__content--item {
+		max-width: 250px;
+	}
+
+	.competence__title {
+		margin: 2rem 2rem;
+	}
+
+	.competence__progress-bar {
+		max-width: 200px;
+	}
+
+	.competence__content {
+		margin: 0 1rem;
+		
+	}
+}
+
 .competence__progress-text {
 	font-size: var(--text-default);
 	padding-bottom: .5em;
 }
 
-/* .competence__progress-bar {
-	width: 300px;
-
-} */
 
 progress[value] {
 	-webkit-appearance: none;
@@ -819,12 +865,10 @@ progress[value]::-webkit-progress-value {
 	flex-direction: column;
 	font-family: var(--default-ff);
 	font-size: var(--text-default);
-	
 }
 
-
 .skill__text {
-	width: 500px;
+	max-width: 500px;
 	padding-bottom: 2rem;
 	line-height: 1.5em;
 	margin: 0 auto;
@@ -832,16 +876,22 @@ progress[value]::-webkit-progress-value {
 
 @media (max-width: 680px) {
 	.skill__text {
-		width: 400px;
+		max-width: 400px;
 		margin-left: 100px;
 	}	
 }
 
 @media (max-width: 535px) {
 	.skill__text {
-		width: 350px;
-		margin-left: 80px;
+		max-width: 350px;
+		margin: 0 2rem;
 	}	
+}
+
+@media (max-width: 420px) {
+	.skill__title {
+		margin: 2rem 2rem;
+	}
 }
 
 .prominent {
