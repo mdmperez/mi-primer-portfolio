@@ -272,7 +272,7 @@ img {
 	.miCheckbox::before {
 		content: " ";
 		height: 2px;
-		width: 36px;
+		width: 37px;
 		top: 1.5rem;
 		right: 1rem;
 		background: var(--color-positive);
@@ -285,7 +285,7 @@ img {
 	.miCheckbox::after {
 		content: " ";
 		height: 2px;
-		width: 36px;
+		width: 37px;
 		top: 2.5rem;
 		right: 1rem;
 		background: var(--color-positive);
