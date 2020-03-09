@@ -224,6 +224,7 @@ img {
 	.header__nav {
 	position: fixed;
 	width: 100vw;
+	transition: all ease .7s;
 	}
 	
 	.fixed-nav  {
@@ -232,7 +233,7 @@ img {
 	background-color: var(--color-transparent);
 	z-index: 3;
 	transform: scale(0.95);
-	transition: all ease .7s;
+	
 	}
 
 }
