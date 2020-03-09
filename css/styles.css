@@ -886,7 +886,7 @@ progress[value]::-webkit-progress-value {
 @media (max-width: 535px) {
 	.skill__text {
 		max-width: 350px;
-		margin: 0 2rem;
+		margin: 0 4rem;
 	}	
 }
 
@@ -900,7 +900,7 @@ progress[value]::-webkit-progress-value {
 	font-weight: bold;
 	font-family: var(--title-ff);
 	font-size: var(--text-s);
-	
+	text-align: left;
 }
 
 
