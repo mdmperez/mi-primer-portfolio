@@ -522,7 +522,7 @@ img {
 
 
 .experience_item-list--job {
-	padding-top: 2rem;
+	padding-top: 1rem;
 	font-size: var(--text-default);
 	padding-bottom: 1em;
 }
@@ -537,7 +537,69 @@ img {
 	font-size: var(--text-xs);
 	margin-bottom: 1em;
 }
-.experience_item-list--info {
+
+.experience_list__btn {
+	background-color: transparent;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid var(--color-positive);
+	font-size: var(--text-xs);
+	cursor: pointer;
+	color: var(--color-positive);
+	transition: all .5s;
+}
+
+.experience_list__btn:hover {
+	transform: scale(1.1);
+}
+
+.experience_list__tooltip {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	background-color: var(--color-main);
+	width: 250px;
+	color: var(--color-negative);
+	padding: 20px;
+	border-radius: 14px;
+	transform: translate(-7px, -235px);
+}
+
+.open-tooltip {
+	visibility: visible;
+	opacity: 1;
+	transition: all .5s;
+}
+
+.experience_list__tooltip--title {
+	font-family: var(--title-ff);
+	font-size: var(--text-s);
+	padding-bottom: 1rem;
+}
+
+.experience_list__tooltip--close{
+	position: absolute;
+	right: 18px;
+	top: 18px;
+	font-size: var(--text-s);
+	color: var(--color-negative);
+	font-family: var(--default-ff);
+	font-weight: bold;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.experience_list__tooltip--close:hover {
+	color: var(--color-soft);
+	transform: rotate(180deg);
+}
+
+.experience_list__tooltip--content {
+	max-height: 30%;
+	overflow: auto;
+}
+
+/* .experience_item-list--info {
 	width: 60px;
 	font-size: var(--text-xs);
 	padding: .5em;
@@ -573,7 +635,7 @@ img {
 
  .experience_item-list--info:hover::before {
 	opacity: 1;
- }
+ } */
 
 /* 	EDUCACIÓN */
 
