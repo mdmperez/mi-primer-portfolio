@@ -13,20 +13,37 @@ function scrollActivate() {
 
 //Botones tooltips
 
-const btn1 = document.querySelector('.btn-tooltip1');
-const tooltip1 = document.querySelector('.tooltip1');
-const closeElement = document.querySelector('.experience_list__tooltip--close');
+const btns = document.querySelectorAll('.experience_list__btn');
+const tooltips = document.querySelectorAll('.experience_list__tooltip');
+const closeElements = document.querySelector('.experience_list__tooltip--close');
 
-function openTooltip(event) {
-  let addClass = event.currentTarget;
-  tooltip1.classList.toggle('open-tooltip');
+btns.forEach(btn => {
+  btn.addEventListener('click', openTooltip);
+   const closeElement = btn.parentElement.querySelector('.experience_list__tooltip--close');
+   closeElement.addEventListener('click', closeTooltip);
+  
+});
+  
+
+
+
+//Funcion para abrir
+function openTooltip() {
+  const btn = event.currentTarget;
+  const tooltip = btn.parentElement.querySelector('.experience_list__tooltip');
+  tooltip.classList.add('open-tooltip');
 }
-function closeTooltip(event) {
-  let addClass = event.currentTarget;
-  tooltip1.classList.toggle('open-tooltip');
+
+//Funcion para cerrar
+function closeTooltip() {
+  const close = event.currentTarget;
+  close.parentElement.classList.remove('open-tooltip');
+  
 }
-btn1.addEventListener('click', openTooltip);
-closeElement.addEventListener('click', openTooltip);
+
+
+
+
 
 
 

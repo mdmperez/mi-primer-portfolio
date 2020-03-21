@@ -562,13 +562,15 @@ img {
 	color: var(--color-negative);
 	padding: 20px;
 	border-radius: 14px;
-	transform: translate(-7px, -235px);
+	transform: translate(-7px, -235px) scale(.5);
+	transition: all .5s;
 }
 
 .open-tooltip {
 	visibility: visible;
 	opacity: 1;
 	transition: all .5s;
+	transform: translate(-7px, -235px) scale(1);
 }
 
 .experience_list__tooltip--title {
