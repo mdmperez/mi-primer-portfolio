@@ -157,13 +157,13 @@ img {
 	position: absolute;
 }
 
-@media (max-width:985px) {
+@media (max-width:1070px) {
 	.header__nav--logo::after {
 		content: " ";
 		width: 66px;
 		height: 50px;
 		top: 0.5rem;
-		right: 0;
+		right: 0.02rem;
 		background:var(--color-transparent);
 		border-radius: 7px 0 0 7px ;
 		position: fixed;
@@ -171,11 +171,10 @@ img {
 
 	.header__list {
 		position: fixed;
-	
 	}
 }
 
-@media (min-width:985px) {
+@media (min-width:1070px) {
 	#miCheckbox-chk,
 	.miCheckbox {
 		display: none;
@@ -194,14 +193,10 @@ img {
 	color: var(--color-main);
 }
 
-
-
-
-
-
 .header__list {
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 }
 
 .header__list-item {
@@ -215,12 +210,12 @@ img {
 	font-family: var(--default-ff);
 } 
 
-.header__list-item:hover a {
-	border-bottom: 2px solid var(--color-main);
+.header__list-item:hover a{
 	color: var(--color-main);
-}
+	border-bottom: 2px solid var(--color-main);
+} 
 
-@media (min-width: 986px) {
+@media (min-width: 1071px) {
 	.header__nav {
 	position: fixed;
 	width: 100vw;
@@ -233,13 +228,10 @@ img {
 	background-color: var(--color-transparent);
 	z-index: 3;
 	transform: scale(0.95);
-	
 	}
-
 }
 
-@media (max-width: 985px) {
-
+@media (max-width: 1071px) {
 	.header__nav {
 		position: absolute;
 		width: 250px;
@@ -270,7 +262,6 @@ img {
 		transition: all ease .3s;
 	}
 	
-
 	.miCheckbox::before {
 		content: " ";
 		height: 2px;
@@ -281,7 +272,6 @@ img {
 		position: fixed;
 		cursor: pointer;
 		transition: all ease .3s;
-
 	}
 	
 	.miCheckbox::after {
@@ -300,11 +290,10 @@ img {
 		display: flex;
 		flex-direction: column;
 		padding: 5rem 0;
-		height: 472px;
+		height: 100%;
 		background: var(--color-negative);
-		transform: translate(200%);
+		transform: translateX(200%);
 		transition: all 1s;
-		
 	}
 	
 	.header__list a {
@@ -315,11 +304,6 @@ img {
 	.header__list-item {
 		padding: 1.5rem 3rem;
 		font-size: var(--text-xs);
-		border-top: 1px solid var(--color-positive);
-	}
-	
-	.header__list-item:last-child {
-		border-bottom: 1px solid var(--color-positive);
 	}
 
 	#miCheckbox-chk:checked ~ .header__list {
@@ -336,7 +320,30 @@ img {
 	}
   	#miCheckbox-chk:checked ~ .miCheckbox::after{
 		transform: rotate(-36deg) translate(10px, -4px);
-		
+	}
+
+	.header__list--submenu {
+		transform: translate(200%, .5rem);
+		z-index: -2;
+		width: 234px;
+	}
+
+	.projects:hover > ul, 
+	.header__list--submenu--item:hover {
+		transition: all .8s ease;
+		visibility: visible;
+		opacity: 1;
+
+		transform: translate(1.3rem, .5rem);
+	}
+
+	.header__list--submenu--item:hover {
+		transform: translate(0);
+		background-color: var(--color-soft);
+	}
+
+	.header__list--submenu--item a {
+		color: var(--color-positive);
 	}
 
 } 
@@ -503,7 +510,6 @@ img {
 	border-radius: 10px; 
 }
 
-
 .even {
 	background: var(--color-soft);
 }
@@ -601,44 +607,6 @@ img {
 	overflow: auto;
 }
 
-/* .experience_item-list--info {
-	width: 60px;
-	font-size: var(--text-xs);
-	padding: .5em;
-	border: 1px solid var(--color-positive);
-	border-radius: 4px;
-	position: relative;
-	
-}
-
- 
-.experience_item-list--info:hover {
-	cursor: help; 
-	color: var(--color-main);
-	border: 1px solid var(--color-main);
- }
- 
- .experience_item-list--info::before {
-	content: attr(data-abbr);
-	position: absolute;
-	text-decoration: none;
-	padding: 1rem;
-	background: var(--color-main);
-	border-radius: 5px;
-	min-height: 1rem;
-	width: 205px;
-	transform: translate(50px, -180px);
-	color: var(--color-negative);
-	
-	opacity: 0;
-	transition: opacity ease .75s;
-  
- }
-
- .experience_item-list--info:hover::before {
-	opacity: 1;
- } */
-
 /* 	EDUCACIÓN */
 
 #education {
@@ -649,13 +617,17 @@ img {
 	background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-soft));
 }
 
+@media (max-width: 430px) {
+	#education {
+		padding: 2rem 1rem;
+	}
+}
+
 .education-header {
 	display: flex;
 	align-items: center;
 	border-radius: 10px;
-
 }
-
 
 .education__title {
 	font-family: var(--title-ff);
@@ -678,22 +650,20 @@ img {
 	border-radius: 10px;
 	padding: 2rem;
 	margin: 1rem;
-	max-width: 280px;
+	width: 280px;
 	min-height: 280px;
 	font-family: var(--default-ff);
 	animation: inicioEducation .6s ease-in;
-
 }
 
 @keyframes inicioEducation {
 	0% {
-		box-shadow: 0 0 20px 0px rgba(156, 156, 156, 0.404);
+		box-shadow: 0 0 20px 0px rgba(37, 30, 30, 0.404);
 		transform: scale(.95);
 		opacity: 0;
 		
 	}
 }
-
 
 .education__card:hover {
 	box-shadow: 9px 9px 5px -8px rgba(0,0,0,0.5);
@@ -808,14 +778,12 @@ progress[value]::-webkit-progress-value {
 	border-radius: 10px; 
 }
 
-
-
 /* IDIOMAS */
 
 #language {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 3rem;
+	padding-bottom: 2rem;
 	background-color: var(--color-main);
 }
 
@@ -833,6 +801,7 @@ progress[value]::-webkit-progress-value {
 	align-items: center;
 	max-width: 800px;
 	margin: 0 auto;
+	padding-top: 2rem;
 	font-family: var(--default-ff);
 }
 
@@ -842,6 +811,7 @@ progress[value]::-webkit-progress-value {
 	width: 100px;
 	margin: 0 100px;
 	align-items: center;
+	font-size: var(--text-default);
 }
 
 @media (max-width: 840px) {
@@ -860,8 +830,6 @@ progress[value]::-webkit-progress-value {
 	}
 }
 
-
-
 .language__name {
 	text-align: center;
 }
@@ -873,6 +841,88 @@ progress[value]::-webkit-progress-value {
 	.language__title {
 		margin: 2rem;
 	}
+}
+
+/* PROJECTOS*/
+
+#projects {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem;
+	background-color: var(--color-soft);
+	background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-soft));
+}
+
+@media (max-width: 430px) {
+	#projects {
+		padding: 2rem 1rem;
+	}
+}
+
+.projects-header {
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+}
+
+.projects__title {
+	font-family: var(--title-ff);
+	font-size: var(--text-m);
+	margin: 1rem;
+	color: var(--color-positive);
+}
+
+.projects__galery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-self: center;
+	margin-top: 2rem auto;
+	max-width: 1100px;
+}
+
+.projects__card {
+	display: flex;
+	flex-direction: column;
+	background: var(--color-main);
+	border-radius: 10px;
+	padding: 2rem;
+	margin: 1rem;
+	width: 280px;
+	min-height: 280px;
+	font-family: var(--default-ff);
+	animation: inicioEducation .6s ease-in;
+}
+
+.projects__card--title {
+	font-weight: bold;
+	text-decoration: underline solid var(--color-negative);
+	padding-bottom: 1rem;
+	line-height: 1.4em;
+}
+
+.projects__card--description {
+	line-height: 1.4em;
+	padding-bottom: 1rem;
+}
+
+.projects__card--btn {
+	align-self: flex-end;
+	background-color: transparent;
+	padding: 8px;
+	border-radius: 6px;
+	border: 2px solid var(--color-strong);
+	font-size: var(--text-xs);
+	transition: all .5s;
+}
+
+.projects__card--btn a {
+	color: var(--color-strong);
+}
+
+.projects__card--btn:hover {
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
 /* HABILIDADES */
